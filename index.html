@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud-system</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- fonts -->
+
+    <!-- fontawsome -->
+        <link rel="stylesheet" href="css/all.min.css">
+    <!-- bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- mainstyle -->
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+ <div class="w-75 mx-auto my-4">
+  <h1 class="header text-center mb-5 mx-auto fw-bold"> Add products</h1>
+    <div class="form-floating mb-2 ">
+    <input  oninput="validInputs(this)"  type="text" class="form-control" id="prodectName" placeholder="prodect Name">
+    <div class="alert alert-danger py-2 mt-0 d-none">
+  Name Should start with capital and two litter than for few or more 
+</div>
+    <label for="prodectName">prodect Name</label>
+  </div>
+ 
+    <div class="bg form-floating mb-4">
+    <input oninput="validInputs(this)"  type="text" class="form-control  " id="prodectPrice" placeholder="Prodect price">
+    <div class="alert alert-danger py-2 mt-0 d-none">
+     not start zero and start any number four number
+    </div>
+    <label for="prodectPrice">prodect Price</label>
+  </div>
+    <div class="form-floating mb-4">
+      <input oninput="validInputs(this)"  list="list" type="text" class="form-control" id="prodectCatagory" placeholder="prodect Catagory">
+      
+      
+      <div class="alert alert-danger py-2 mt-2 d-none">
+    you should be tv or pc or dell or appl
+      </div>
+
+      <label for="prodectCatagory">prodectCatagory</label>
+    <datalist id="list" >
+      <option value="hp"></option>
+      <option value="Toshiba"></option>
+      <option value="Dell"></option>
+      <option value="Appl"></option>
+    </datalist>
+    </div>  
+      <div class="form-floating mb-4">
+        <textarea oninput="validInputs(this)"class="form-control" id="prodectDiscraption" placeholder="prodect Discraption" ></textarea>
+        <div class="alert alert-danger py-2 mt-2 d-none">
+          any thing not sbashel caracter   , two or more 
+        </div>
+    <label for="prodectDiscraption">prodect Discraption</label>
+  </div>
+      <div class="form-floating mb-4">
+    <input type="file" class="form-control" id="prodectImage" placeholder="prodect file">
+    <label for="prodectImage">prodect file</label>
+  </div>
+
+  <button onclick="addproduct()" class="btn btn-primary btn-lg" id="add">add product</button>
+  <button onclick="update()" class="btn btn-info px-5 py-2 d-none" id="upd"> Update</button>
+    <div class=" mt-4">
+    <input oninput="searchProduct()" type="search" id="searchProducts" class="form-control">
+    
+  </div>
+  </div>
+  <div class="w-75 mx-auto my-3">
+    <div class="row" id="row">
+ 
+      </div>
+
+  </div>
+  
+  
+    <!-- bootstrap js -->
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <!-- main js -->
+      <script src="js/index.js"></script>
+     
+</body>
+</html>
+
+ 
